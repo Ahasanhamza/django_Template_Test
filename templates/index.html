@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body_for_other_HTML %}
+
+    <h2> my home page</h2>
+    <div>
+        <p>
+            name: {{ name }}
+        </p>
+        <p>
+            country: {{ country }}
+        </p>
+        <p>
+            {% for num in list %}
+            {% if num >= 3 %}
+            <h{{ num }} > how are you?  </h{{ num }}>
+            {% else %}
+            <h{{ num }} > good  </h{{ num }}>
+            {% endif %}
+            {% endfor %}
+        </p>
+    </div>
+{% endblock %}
